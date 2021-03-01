@@ -1,0 +1,30 @@
+<div class="calculator"></div>
+
+var calculator = document.body.querySelector(".calculator");
+var answer = 0;
+var num1 = Number(prompt("Enter a number"));
+if (isNaN(num1) == false) {
+  var num2 = Number(prompt("Enter another number"));
+  if (isNaN(num2) == false) {
+    var operator = prompt("Choose an operator: +, -, *, /");
+    if (operator == "+") {
+      answer = num1 + num2;
+      calculator.innerHTML = "The answer is " + answer;
+    } else if (operator == "-") {
+      answer = num1 - num2;
+      calculator.innerHTML = "The answer is " + answer;
+    } else if (operator == "*") {
+      answer = num1 * num2;
+      calculator.innerHTML = "The answer is " + answer;
+    } else if (operator == "/") {
+      answer = num1 / num2;
+      calculator.innerHTML = "The answer is " + answer;
+    } else {
+      calculator.innerHTML = "Invalid operator";
+    }
+  } else {
+    calculator.innerHTML = "Invalid number 2";
+  }
+} else {
+  calculator.innerHTML = "Invalid number 1";
+}
